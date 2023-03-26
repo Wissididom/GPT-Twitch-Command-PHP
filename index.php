@@ -20,6 +20,7 @@ if (isset($_GET['prompt'])) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$response = curl_exec($ch);
 	curl_close($ch);
+	echo $response;
 } else {
 	http_response_code(400);
 	echo '400 Bad Request - Missing required parameter prompt';
