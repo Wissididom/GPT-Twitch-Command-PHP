@@ -10,6 +10,7 @@ if (isset($_GET['prompt'])) {
 	]);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
 		'model' => 'gpt-3.5-turbo',
+		'max_tokens' => 180, // estimated by using https://platform.openai.com/tokenizer
 		'messages' => [
 			[
 				'role' => 'user',
